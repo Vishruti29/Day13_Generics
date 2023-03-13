@@ -11,7 +11,7 @@ public class TestMaximum {
             greatestNumber.passfloat(options);
             greatestNumber.passString(options);
         }
-        void passinteger(int size ){
+            void passinteger(int size ){
             Scanner userinput = new Scanner(System.in);
             Integer[] nums= new Integer[size];
             System.out.println(" Enter elements of integer array : ");
@@ -21,7 +21,7 @@ public class TestMaximum {
             TestMaximum greatestNumber = new TestMaximum();
             greatestNumber.maxvalue(nums);
         }
-          void passfloat(int size){
+            void passfloat(int size){
             Scanner userinput = new Scanner(System.in);
             Float[] numsf = new Float[size];
             System.out.println("Enter elements of float array");
@@ -31,15 +31,15 @@ public class TestMaximum {
             TestMaximum greatestNumber = new TestMaximum();
             greatestNumber.maxvalue(numsf);
     }
-    void passString(int size){
-        Scanner userinput = new Scanner(System.in);
-        String[] numsS = new String[size];
-        System.out.println("Enter elements of String array");
-        for (int k = 0 ; k <  size; k++){
+            void passString(int size){
+            Scanner userinput = new Scanner(System.in);
+            String[] numsS = new String[size];
+            System.out.println("Enter elements of String array");
+            for (int k = 0 ; k <  size; k++){
             numsS[k] = userinput.nextLine();
-        }
-        TestMaximum greatestNumber = new TestMaximum();
-        greatestNumber.maxvalue(numsS);
+            }
+            TestMaximum greatestNumber = new TestMaximum();
+            greatestNumber.maxvalue(numsS);
 
     }
         public <T extends Comparable<T> >void maxvalue(T[] array){
