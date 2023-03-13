@@ -9,6 +9,7 @@ public class TestMaximum {
 
             greatestNumber.passinteger(options);
             greatestNumber.passfloat(options);
+            greatestNumber.passString(options);
         }
         void passinteger(int size ){
             Scanner userinput = new Scanner(System.in);
@@ -29,6 +30,17 @@ public class TestMaximum {
             }
             TestMaximum greatestNumber = new TestMaximum();
             greatestNumber.maxvalue(numsf);
+    }
+    void passString(int size){
+        Scanner userinput = new Scanner(System.in);
+        String[] numsS = new String[size];
+        System.out.println("Enter elements of String array");
+        for (int k = 0 ; k <  size; k++){
+            numsS[k] = userinput.nextLine();
+        }
+        TestMaximum greatestNumber = new TestMaximum();
+        greatestNumber.maxvalue(numsS);
+
     }
         public <T extends Comparable<T> >void maxvalue(T[] array){
             for (int i=0;i<array.length;i++){
