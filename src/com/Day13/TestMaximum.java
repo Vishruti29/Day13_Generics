@@ -1,6 +1,4 @@
 package com.Day13;
-import com.sun.istack.internal.NotNull;
-
 import java.util.Scanner;
 public class TestMaximum {
         public static void main(String[] args){
@@ -10,7 +8,7 @@ public class TestMaximum {
             int options = new Scanner(System.in).nextInt();
 
             greatestNumber.passinteger(options);
-
+            greatestNumber.passfloat(options);
         }
         void passinteger(int size ){
             Scanner userinput = new Scanner(System.in);
@@ -22,7 +20,17 @@ public class TestMaximum {
             TestMaximum greatestNumber = new TestMaximum();
             greatestNumber.maxvalue(nums);
         }
-        public <T extends Comparable<T> >void maxvalue(T array[]){
+          void passfloat(int size){
+            Scanner userinput = new Scanner(System.in);
+            Float[] numsf = new Float[size];
+            System.out.println("Enter elements of float array");
+            for (int k = 0 ; k <  size; k++){
+                numsf[k] = userinput.nextFloat();
+            }
+            TestMaximum greatestNumber = new TestMaximum();
+            greatestNumber.maxvalue(numsf);
+    }
+        public <T extends Comparable<T> >void maxvalue(T[] array){
             for (int i=0;i<array.length;i++){
                 for (int j=i+1;j< array.length;j++){
                     if (array[i].compareTo(array[j])<0){
